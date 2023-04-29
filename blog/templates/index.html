@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static './css/main.css' %}" />
+    <title>Donation</title>
+  </head>
+
+  <body>
+    <!-- Header section Start-->
+    <h6 style="color: black; text-align: right">
+      <img src="../static/image/user-solid.svg" height="20px" width="20px" /> {{user.username }}
+    </h6>
+    <header class="top">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'money' %}">Donate Money</a>
+        <a href="{% url 'donate' %}">Donate Food</a>
+        <a href="{% url 'donor' %}">Report</a>
+        <a href="{% url 'contacts' %}">Contact</a>
+        <a href="{% url 'signin' %}">SignUp</a>
+        <a href="{% url 'logout' %}"> LogOut</a>
+      </div>
+
+      <nav id="navbar">
+        <!-- container Start-->
+        <div class="container">
+          <!--Row Start-->
+          <div class="row">
+            <div class="col-lg-4 col-9 logo">
+              <a href="index.html"
+                ><img
+                  src="../static/image/logo.jpg"
+                  height="80px"
+                  width="80px"
+                  alt="logo"
+              /></a>
+            </div>
+            <div class="col-lg-8 col-3">
+              <div class="social-icons square">
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                  <span class="slide-menu" onclick="openNav()"
+                    ><i class="fa fa-bars" aria-hidden="true"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Row Ended-->
+        </div>
+        <!-- container Ended-->
+      </nav>
+    </header>
+    <!-- Header section Ended-->
+    <section class="banner-home">
+      <!-- Banner section Start-->
+
+      <!-- container Start-->
+      <div class="container-fluid">
+        <!--Row Start-->
+        <div class="row">
+          <div class="col-lg-5 col-sm-5 col-12 col-1">
+            <div class="gradient"></div>
+            <div class="left-content" data-aos="fade-up" data-aos-delay="300">
+              <h2>
+                <span>Donate & Fill </span>
+                <span>The hearts</span>
+                <span class="space">//</span>
+              </h2>
+              <p>Donate a food for the child</p>
+              <p>Make them happy and fill their stomach</p>
+              <div class="flex-center">
+                <!-- Facebook -->
+                <a class="fb-ic">
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                  <i class="fa fa-twitter fa-lg" aria-hidden="true"> </i>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                  <i class="fa fa-pinterest fa-lg" aria-hidden="true"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                  <i class="fa fa-vimeo" aria-hidden="true"></i>
+                </a>
+                <!--Pinterest-->
+                <a class="pin-ic">
+                  <i class="fa fa-google-plus fa-lg" aria-hidden="true"> </i>
+                </a>
+              </div>
+              <h6>
+                <i class="fa fa-map-marker" aria-hidden="true"></i
+                ><span>204, Manjakuppam, cuddalore</span>
+              </h6>
+              <h6>
+                <i class="fa fa-clock-o" aria-hidden="true"></i
+                ><span>10:00 am - 11:00 pm</span>
+              </h6>
+              <h6>
+                <i class="fa fa-phone" aria-hidden="true"></i
+                ><span>800 1234 5678</span>
+              </h6>
+            </div>
+          </div>
+          <div
+            class="col-lg-7 col-sm-7 col-12 col-2"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <h1>
+              <span>Help</span>
+              <span>On</span>
+              <span>Hunger //</span>
+            </h1>
+            <div class="more-button">
+              <a href="{% url 'about' %}" class="btn btn-primary btn-lg"
+                >know more</a
+              >
+              <a href="{% url 'login' %}" class="btn btn-secondary btn-lg"
+                >Login</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--Row Ended-->
+      </div>
+      <!-- container Ended-->
+    </section>
+    <!-- Banner section Ended-->
+
+    <section class="section-2">
+      <div class="container-fluid">
+        <div class="heading">
+          <h2>check our portfolio //</h2>
+          <h3>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="row" data-aos="fade-right" data-aos-delay="300">
+              <a
+                href="../static/image/child.png"
+                data-toggle="lightbox"
+                data-gallery="example-gallery"
+                class="col-sm-12 box other"
+              >
+                <img
+                  src="../static/image/child.png"
+                  class="img-fluid"
+                  alt="portfolio"
+                />
+                <div class="overlay">
+                  <img src="../static/image/plus-img.png" alt="plus-icon" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="row">
+              <a
+                href="../static/image/hung.png"
+                data-toggle="lightbox"
+                data-gallery="example-gallery"
+                class="col-sm-6 box col1"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
+                <img
+                  src="../static/image/hung.png"
+                  class="img-fluid"
+                  alt="portfolio"
+                />
+                <div class="overlay">
+                  <img src="../static/image/plus-img.png" alt="plus-icon" />
+                </div>
+              </a>
+              <a
+                href="../static/image/gi.jpeg"
+                data-toggle="lightbox"
+                data-gallery="example-gallery"
+                class="col-sm-6 box col1"
+                data-aos="fade-left"
+                data-aos-delay="500"
+              >
+                <img
+                  src="../static/image/gi.jpeg"
+                  class="img-fluid"
+                  alt="portfolio"
+                />
+                <div class="overlay">
+                  <img src="../static/image/plus-img.png" alt="plus-icon" />
+                </div>
+              </a>
+              <a
+                href="../static/image/pain.png"
+                data-toggle="lightbox"
+                data-gallery="example-gallery"
+                class="col-sm-6 box col1"
+                data-aos="fade-left"
+                data-aos-delay="700"
+              >
+                <img
+                  src="../static/image/pain.png"
+                  class="img-fluid"
+                  alt="portfolio"
+                />
+                <div class="overlay">
+                  <img src="../static/image/plus-img.png" alt="plus-icon" />
+                </div>
+              </a>
+              <a
+                href="../static/image/girl.jpeg"
+                data-toggle="lightbox"
+                data-gallery="example-gallery"
+                class="col-sm-6 box col1"
+                data-aos="fade-left"
+                data-aos-delay="900"
+              >
+                <img
+                  src="../static/image/girl.jpeg"
+                  class="img-fluid"
+                  alt="portfolio"
+                />
+                <div class="overlay">
+                  <img src="../static/image/plus-img.png" alt="plus-icon" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a
+            href="../static/image/eat.png"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-6 box col2"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
+            <img
+              src="../static/image/eat.png"
+              class="img-fluid"
+              alt="portfolio"
+            />
+            <div class="overlay">
+              <img src="../static/image/plus-img.png" alt="plus-icon" />
+            </div>
+          </a>
+          <a
+            href="../static/image/1.jpeg"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-6 box col2"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <img
+              src="../static/image/1.jpeg"
+              class="img-fluid"
+              alt="portfolio"
+            />
+            <div class="overlay">
+              <img src="../static/image/plus-img.png" alt="plus-icon" />
+            </div>
+          </a>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="300">
+          <a
+            href="../static/image/app.jpeg"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-4 box col3"
+          >
+            <img
+              src="../static/image/app.jpeg"
+              class="img-fluid"
+              alt="portfolio"
+            />
+            <div class="overlay">
+              <img src="../static/image/plus-img.png" alt="plus-icon" />
+            </div>
+          </a>
+          <a
+            href="../static/image/paint.png"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-4 box col3"
+          >
+            <img
+              src="../static/image/paint.png"
+              class="img-fluid"
+              alt="portfolio"
+            />
+            <div class="overlay">
+              <img src="../static/image/plus-img.png" alt="plus-icon" />
+            </div>
+          </a>
+          <a
+            href="../static/image/dra.png"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-4 box col3"
+          >
+            <img
+              src="../static/image/dra.png"
+              class="img-fluid"
+              alt="portfolio"
+            />
+            <div class="overlay">
+              <img src="../static/image/plus-img.png" alt="plus-icon" />
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="more-button" data-aos="fade-up" data-aos-delay="500">
+        <a href="{% url 'about' %}" class="btn btn-primary btn-lg">know more</a>
+        <a href="{% url 'about' %}" class="btn btn-secondary btn-lg"
+          >know more</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="gradient"></div>
+      <section class="Subscribe">
+        <div class="container">
+          <!-- Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-lg-6 col-sm-6 col1">
+              <div class="heading">
+                <h3>Do You Like Our Service?</h3>
+                <h6>Subscribe for newsletter</h6>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col1">
+              <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                  <input
+                    name="email"
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email id"
+                    required
+                  />
+                  <button class="btn btn-info" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Links -->
+      <div class="container">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center">
+          <!-- Grid column -->
+          <div class="col-md-12">
+            <a href="index.html"
+              ><img
+                src="../static/image/logo.jpg"
+                height="150"
+                width="130"
+                alt="footer-logo"
+            /></a>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <div class="row text-center d-flex justify-content-center">
+          <!-- Grid column -->
+          <div class="col-md-12">
+            <ul>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="{% url 'index' %}"
+                  >Home</a
+                >
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="{% url 'about' %}"
+                  >Abbout-us
+                </a>
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="services.html"
+                  >our services
+                </a>
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="{% url 'donate' %}"
+                  >Donate Form
+                </a>
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="blog.html">read blog</a>
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="{% url 'contacts' %}"
+                  >contact</a
+                >
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="support.html">support</a>
+              </li>
+              <li class="hidden">|</li>
+              <li class="nav-item">
+                <a class="page-scroll nav-link" href="{% url 'signin' %}"
+                  >SignUp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Grid row-->
+        <div class="row d-flex text-center justify-content-center mb-md-0">
+          <!-- Grid column -->
+          <div class="col-md-8 col-12">
+            <address>
+              <p>
+                <span>St. joseph's college, manjakuppam ,Cuddalore-1</span>
+                <span>Opening Hours : All time</span>
+                <span class="call">Call for Quries : 888 444 3455</span>
+              </p>
+            </address>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+      </div>
+      <!-- Footer Links -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- BackToTop Button -->
+    <a
+      href="javascript:void(0);"
+      id="scroll"
+      title="Scroll to Top"
+      style="display: none"
+      >Top<span></span
+    ></a>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../static/js/animate.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script>
+      $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
+  </body>
+</html>

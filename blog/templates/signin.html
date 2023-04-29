@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page with Background Image Example</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/css/signin.css' %}">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div id="bg"></div>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-field">
+      <input type="text" placeholder="Username / Phone Number" name="name" required />
+    </div>
+    <div class="form-field">
+      <input type="email" placeholder="Email id" name="email" required />
+    </div>
+
+    <div class="form-field">
+      <input type="password" placeholder="Password" name="pass1" required />
+    </div>
+    <div class="form-field">
+      <input type="password" placeholder="Confirm password" name="pass2" required />
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color:white; font-family: 'Poppins',sans-serif;">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+
+    <div class="form-field">
+      <button class="btn" type="submit">Create</button>
+      <a href="{% url 'login' %}" > Existing user</a>
+    </div>
+  </form>
+  <!-- partial -->
+
+</body>
+
+</html>

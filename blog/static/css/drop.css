@@ -1,0 +1,59 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  border: 2px solid #b2b2b2; /* Set border color to brown */
+  border-radius: 4px; /* Add border radius */
+        
+}
+
+/* Styling for the dropdown button */
+.dropdown input[type="text"] {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  width: 800px;
+  height: 30px;
+}
+
+/* Styling for the dropdown content container */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 160px;
+  padding: 15px;
+  width: 300px;
+}
+.dropdown-content label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Styling for the dropdown content checkboxes */
+.dropdown-content input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Styling for the dropdown content labels */
+.dropdown-content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styling for the dropdown content when hovered over */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.textbox {
+  width: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
